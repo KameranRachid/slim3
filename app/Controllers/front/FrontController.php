@@ -102,7 +102,7 @@ class FrontController extends BaseController
             'address'         => v::notEmpty(),
             'nr_angajat'        => v::notEmpty(),
             'nr_fac'        => v::notEmpty(),
-            'email'        => v::notEmpty(),
+            'email'        => v::email(),
             'phone'        => v::phone(),
             'message'       => v::notEmpty(),
             'g-recaptcha-response' => v::recaptcha()
@@ -143,6 +143,29 @@ class FrontController extends BaseController
         }else{
             $this->setFlash("Error sending mail", "error");
             return $this->redirect($response, 'offer', 400);
+        }
+    }
+
+    public function newsletter(Request $request, ResponseInterface $response)
+    {
+        $result = false;
+
+        $validation = $this->validate($request, [
+            'person_name'   => v::notEmpty(),
+            'email'         => v::email()
+        ]);
+
+        if ($validation->failed()) {
+            return $response->withJson($result);
+        }
+
+        $created = self::saveClient($request);
+
+        if(!$created){
+            return $response->withJson($result);
+        }else{
+            $result = true;
+            return $response->withJson($result);
         }
     }
 

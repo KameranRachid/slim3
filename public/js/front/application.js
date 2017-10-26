@@ -22,7 +22,34 @@ $(document).ready(function() {
     transition: function(url){ window.location.href = url; }
   });
 
+  $("form#newsLetter").on('submit', function(e) {
+    e.preventDefault();
+    FrontActions.newsletter($(this));
+  });
+
 });
+
+var FrontActions = {
+  newsletter: function(form) {
+      $.ajax({
+          url: baseUrl + '/newsletter',
+          type: 'POST',
+          data: {
+              person_name: form.find("input[name=person_name]").val(),
+              email: form.find("input[name=email]").val()
+          },
+          success: function (data) {
+              if(data === true ){
+                  $(document).find('.alert-success').removeClass('hidden-xs-up');
+                  $(document).find('.alert-danger').addClass('hidden-xs-up');
+              }else{
+                  $(document).find('.alert-danger').removeClass('hidden-xs-up');
+                  $(document).find('.alert-success').addClass('hidden-xs-up');
+              }
+          }
+      });
+  }
+};
 
 
 // back to top button - docs

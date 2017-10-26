@@ -43,6 +43,8 @@
 
     </style>
 
+    <script>var baseUrl = '{{ baseUrl }}'</script>
+
 </head>
 
 <body class="animsition">
@@ -171,6 +173,60 @@
         </div>
     </div>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="newsLetter" tabindex="-1" role="dialog" aria-labelledby="newsLetterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsLetterTitle"><strong><span class="icon icon-leaf"></span></strong>Inscrie-te acum!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form id="newsLetter" method="POST">
+
+                    <div class="controls">
+                        <div class="container">
+
+
+                            <img src="{{ base_url() }}/img/newsletter.jpeg" style="width: 100%;margin-bottom:35px;">
+
+                            <div class="alert alert-success hidden-xs-up">
+                                V-ati abonat cu success !
+                            </div>
+                            <div class="alert alert-danger hidden-xs-up">
+                                Va rugam sa reincercati !
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name"><strong>Nume Complet *</strong></label>
+                                    <input id="name" type="text" name="person_name" value="{{ old.person_name }}" class="form-control">
+                                </div>
+                            </div><!-- End form-group name -->
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email"><strong>Email *</strong></label>
+                                    <input id="email" type="email" name="email" value="{{ old.email }}" class="form-control">
+                                </div>
+                            </div><!-- End form-group Email -->
+
+                            <input type="submit" class="btn btn-xs btn-pill btn-success" style="margin-left:14px;" value="Aboneaza-te">
+
+
+                        </div><!-- End Class Container -->
+                    </div><!-- END Class CONTROLS -->
+
+                </form><!-- END FORM -->
+
+            </div>
+        </div>
+    </div>
 </div>
 
 

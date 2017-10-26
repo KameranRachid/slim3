@@ -61,7 +61,7 @@ class SqlServerConnector extends Connector implements ConnectorInterface
     protected function prefersOdbc(array $config)
     {
         return in_array('odbc', $this->getAvailableDrivers()) &&
-               ($config['odbc'] ?? null) === true;
+               array_get($config, 'odbc') === true;
     }
 
     /**
@@ -128,10 +128,6 @@ class SqlServerConnector extends Connector implements ConnectorInterface
 
         if (isset($config['multiple_active_result_sets']) && $config['multiple_active_result_sets'] === false) {
             $arguments['MultipleActiveResultSets'] = 'false';
-        }
-
-        if (isset($config['transaction_isolation'])) {
-            $arguments['TransactionIsolation'] = $config['transaction_isolation'];
         }
 
         return $this->buildConnectString('sqlsrv', $arguments);

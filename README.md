@@ -29,6 +29,5 @@ git push origin master
 
 
 Thuy Dung:
-=> bug sistem de paginare
 
 
