@@ -21,7 +21,7 @@ $container['auth'] = function () use ($container) {
 $container['upload_directory'] = dirname(__DIR__) . '/public/uploads';
 
 $container['mailer'] = function ($container) {
-    $transport = Swift_SmtpTransport::newInstance('localhost', 1025);
+    $transport = Swift_SmtpTransport::newInstance('absgroup.ro');
     $mailer = Swift_Mailer::newInstance($transport);
     return $mailer;
 };

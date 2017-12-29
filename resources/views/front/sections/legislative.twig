@@ -8,40 +8,18 @@
 
 
                     {% for post in postList %}
-
-                        <div class="card" style="width: 20rem;">
-                            {% if post.image.name %}
-                                <img class="card-img-top" src="{{ base_url() }}/uploads/{{ post.image.name }}" alt="Card image cap">
-                            {% endif %}
-                            <div class="card-block">
-                                <h4 class="card-title">{{ post.title }}</h4>
-                                <p class="card-text">{{ post.description }}</p>
-                                <button type="button" class="btn btn-sm btn-pill btn-primary" data-toggle="modal" data-target="#noutatiLegislativeModal{{ post.id }}">
-                                    Citeste mai mult
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="noutatiLegislativeModal{{ post.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">{{ post.title }}</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        {% if post.image.name %}
-                                            <img class="img-fluid" src="{{ base_url() }}/uploads/{{ post.image.name }}">
-                                        {% endif %}
-                                        <p>{{ post.content|raw }}</p>
+                        <div class="col-sm-4">
+                                <div class="card">
+                                    {% if post.image.name %}
+                                        <img class="card-img-top" src="{{ base_url() }}/uploads/{{ post.image.name }}" alt="Card image cap">
+                                    {% endif %}
+                                    <div class="card-block">
+                                        <h4 class="card-title">{{ post.title }}</h4>
+                                        <p class="card-text">{{ post.description }}</p>
+                                        <a href="{{ path_for('legislative',{ 'slug': post.slug }) }}" class="btn btn-sm btn-pill btn-default"><span class="icon icon-info"></span> Citeste mai multe!</a>
                                     </div>
                                 </div>
-                            </div>
                         </div>
-
 
                     {% endfor %}
 

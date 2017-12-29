@@ -1,1 +1,0 @@
-CREATE TABLE `slim3`.`clients` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NULL , `company` VARCHAR(255) NULL , `phone` INT(10) NULL , `email` VARCHAR(255) NOT NULL , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

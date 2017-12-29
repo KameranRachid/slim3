@@ -10,7 +10,7 @@ $app->post('/newsletter', \App\Controllers\Front\FrontController::class.':newsle
 $app->get('/contact', \App\Controllers\Front\FrontController::class.':contact')->setName('contact');
 $app->post('/contact', \App\Controllers\Front\FrontController::class.':postContact');
 
-$app->get('/noutati-legislative', \App\Controllers\Front\FrontController::class.':legislative')->setName('legislative');
+$app->get('/noutati-legislative[/{slug}]', \App\Controllers\Front\FrontController::class.':legislative')->setName('legislative');
 
 $app->get('/servicii[/{slug}]', \App\Controllers\Front\FrontController::class.':service')->setName('service');
 

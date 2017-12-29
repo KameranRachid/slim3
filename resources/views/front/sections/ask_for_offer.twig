@@ -8,7 +8,7 @@
 
             <div class="row app-align-center">
 
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12">
 
                     <div class="messages">
                         {% include('front/sections/flash_message.twig') %}
@@ -27,83 +27,99 @@
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.company_name %} has-error {% endif %}">
-                                        <label for="company_name"><strong>Numele Companiei *</strong></label>
-                                        <input id="company_name" type="text" name="company_name" value="{{ old.company_name }}" class="form-control" required="required">
-                                        {% for error in flash.errors.company_name %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.company_name %} has-error {% endif %}">
+                                        <label for="company_name" class="col-sm-5"><strong>Numele Companiei *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="company_name" type="text" name="company_name" value="{{ old.company_name }}" class="form-control" required="required">
+                                                {% for error in flash.errors.company_name %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.person_name %} has-error {% endif %}">
-                                        <label for="person_name"><strong>Persoana de Contact *</strong></label>
-                                        <input id="person_name" type="text" name="person_name" value="{{ old.person_name }}" class="form-control" required="required">
-                                        {% for error in flash.errors.person_name %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.person_name %} has-error {% endif %}">
+                                        <label for="person_name" class="col-sm-5"><strong>Persoana de Contact *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="person_name" type="text" name="person_name" value="{{ old.person_name }}" class="form-control" required="required">
+                                                {% for error in flash.errors.person_name %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.service %} has-error {% endif %}">
-                                        <label for="service"><strong>Serviciul Solicitat *</strong></label>
-                                        <input id="service" type="text" name="service" value="{{ old.service }}" class="form-control" required="required">
-                                        {% for error in flash.errors.service %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.service %} has-error {% endif %}">
+                                        <label for="service" class="col-sm-5"><strong>Serviciul Solicitat *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="service" type="text" name="service" value="{{ old.service }}" class="form-control" required="required">
+                                                {% for error in flash.errors.service %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.address %} has-error {% endif %}">
-                                        <label for="address"><strong>Adresa Sediu/ Punct de Lucru *</strong></label>
-                                        <input id="address" type="text" name="address" value="{{ old.address }}" class="form-control">
-                                        {% for error in flash.errors.address %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.address %} has-error {% endif %}">
+                                        <label for="address" class="col-sm-5"><strong>Adresa Sediu/ Punct de Lucru *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="address" type="text" name="address" value="{{ old.address }}" class="form-control">
+                                                {% for error in flash.errors.address %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.nr_angajat %} has-error {% endif %}">
-                                        <label for="nr_angajat"><strong>Numar Angajati *</strong></label>
-                                        <input id="nr_angajat" type="number" name="nr_angajat" value="{{ old.nr_angajat }}" class="form-control">
-                                        {% for error in flash.errors.nr_angajat %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.nr_angajat %} has-error {% endif %}">
+                                        <label for="nr_angajat" class="col-sm-5"><strong>Numar Angajati *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="nr_angajat" type="number" name="nr_angajat" value="{{ old.nr_angajat }}" class="form-control">
+                                                {% for error in flash.errors.nr_angajat %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.nr_fac %} has-error {% endif %}">
-                                        <label for="nr_fac"><strong>Numar Facturi Emise Lunar *</strong></label>
-                                        <input id="nr_fac" type="number" name="nr_fac" value="{{ old.nr_fac }}" class="form-control">
-                                        {% for error in flash.errors.nr_fac %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.nr_fac %} has-error {% endif %}">
+                                        <label for="nr_fac" class="col-sm-5"><strong>Numar Facturi Emise Lunar *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="nr_fac" type="number" name="nr_fac" value="{{ old.nr_fac }}" class="form-control">
+                                                {% for error in flash.errors.nr_fac %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.email %} has-error {% endif %}">
-                                        <label for="email"><strong>Email *</strong></label>
-                                        <input id="email" type="email" name="email" value="{{ old.email }}" class="form-control">
-                                        {% for error in flash.errors.email %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.email %} has-error {% endif %}">
+                                        <label for="email" class="col-sm-5"><strong>Email *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="email" type="email" name="email" value="{{ old.email }}" class="form-control">
+                                                {% for error in flash.errors.email %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {% if flash.errors.phone %} has-error {% endif %}">
-                                        <label for="phone"><strong>Numar de Contact *</strong></label>
-                                        <input id="phone" type="tel" name="phone" value="{{ old.phone }}" class="form-control">
-                                        {% for error in flash.errors.phone %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                    <div class="form-group row {% if flash.errors.phone %} has-error {% endif %}">
+                                        <label for="phone" class="col-sm-5"><strong>Numar de Contact *</strong></label>
+                                            <div class="col-sm-7">
+                                                <input id="phone" type="tel" name="phone" value="{{ old.phone }}" class="form-control">
+                                                {% for error in flash.errors.phone %}
+                                                    <span class="help-block">{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group {% if flash.errors.message %} has-error {% endif %}">
+                                    <div class="form-group{% if flash.errors.message %} has-error {% endif %}">
                                         <label for="form_message"><strong>Completati Solicitarea in campul de mai jos *</strong></label>
                                         <textarea id="form_message" name="message" class="form-control" rows="4" required="required">{{ old.message }}</textarea>
                                         {% for error in flash.errors.message %}
@@ -115,7 +131,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <!-- Replace data-sitekey with your own one, generated at https://www.google.com/recaptcha/admin -->
-                                        <div class="g-recaptcha" data-sitekey="6LccdzQUAAAAALgzVBOaEMRqazHY1e_T-fqd861j"></div>
+                                        <div class="g-recaptcha" data-sitekey="6LcZCjYUAAAAAPqs7TXAYpwqzFA2cuGRMRAbKwhA"></div>
                                     </div>
                                 </div>
 

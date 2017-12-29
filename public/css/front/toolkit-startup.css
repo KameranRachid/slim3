@@ -472,7 +472,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  border-top: 2px solid rgba(255, 255, 255, 0.9); }
 
 small,
 .small {
@@ -4249,7 +4249,9 @@ button.close {
   border-width: 10px; }
 
 .carousel {
-  position: relative; }
+  position: relative;
+  margin-bottom: 50px;
+  box-shadow: 10px 10px 5px #aaaaaa;  }
 
 .carousel-inner {
   position: relative;
@@ -6872,10 +6874,6 @@ textarea {
   padding-left: 5px;
   padding-right: 5px; }
 
-@media (min-width: 576px) {
-  .navbar-padded {
-    padding-top: 20px;
-    padding-bottom: 20px; } }
 
 .navbar-form-control {
   border: 0;
@@ -8504,7 +8502,7 @@ h1.block-title {
       font-size: 21px; } }
 
 .navbar-transparent {
-  background-color: transparent;
+  background-color: #000000;
   border-color: transparent; }
   .navbar-transparent .navbar-brand {
     color: #FFFFFF  ; }
@@ -8569,12 +8567,12 @@ h1.block-title {
   background-image: none; }
 
 .carousel-light .carousel-indicators li {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #616A6B);
   border: 0; }
 
 .carousel-light .carousel-indicators .active {
-  background-color: #fff;
-  border: 1px solid #2595FF; }
+  background-color: #000000;
+  border: 1px solid #2ECC71; }
 
 .callout {
   position: relative;
@@ -8920,11 +8918,12 @@ img.zoom-img {
       .pull-quote > p {
         font-size: 1.2rem; } }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
     .ceccarCafr > img {
         max-width: 25%;
     }
 }
+
 
 
 .stage {
@@ -8939,7 +8938,7 @@ img.zoom-img {
   z-index: 0;
   width: 250px;
   max-height: 700px;
-  padding-top: 30px;
+  padding-top: 10px;
   background-color: #f2f2f2; }
 
 .stage-shelf-right {
@@ -9002,6 +9001,7 @@ div.wtf > hr.style18 {
     border-width: 1px 0 0 0;
     border-radius: 20px;
 }
+
 
 
 

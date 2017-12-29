@@ -101,12 +101,11 @@ class BaseController
 
         $message = \Swift_Message::newInstance($subject)
             ->setFrom([$request->getParam('email')  => $fullName])
-            ->setTo('contact@localhost.com')
+            ->setTo('cosmin.dumitrascu@gmail.com')
             ->setBody($messageBody);
 
         $sent = $mailer->send($message);
 
         return $sent;
     }
-
 }

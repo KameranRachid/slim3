@@ -32,24 +32,30 @@ class FrontController extends BaseController
         return $this->render($response, $returnView, $returnArray);
     }
 
-    public function legislative(RequestInterface $request, ResponseInterface $response)
+    public function legislative(RequestInterface $request, ResponseInterface $response, $args)
     {
-        $perPage = 6;
-        $totalPosts = Post::where('is_active', 1)->where('zone', 'blog')->count();
-
-        if($totalPosts > $perPage){
-            $returnArray['postList'] = Post::where('is_active', 1)
-                ->where('zone', 'blog')
-                ->orderByDesc('created_at')
-                ->paginate($perPage, ['*'], 'page', $request->getParam('page'));
+        if(isset($args['slug']) && $args['slug'] !== null){
+            $returnArray['post'] = Post::where('slug', $args["slug"])->first();
+            $returnView = 'front/sections/legislative_detalii.twig';
         }else{
-            $returnArray['postList'] = Post::where('is_active', 1)
-                ->where('zone', 'blog')
-                ->orderByDesc('created_at')
-                ->get();
+            $perPage = 6;
+            $totalPosts = Post::where('is_active', 1)->where('zone', 'blog')->count();
+
+            if($totalPosts > $perPage){
+                $returnArray['postList'] = Post::where('is_active', 1)
+                    ->where('zone', 'blog')
+                    ->orderByDesc('created_at')
+                    ->paginate($perPage, ['*'], 'page', $request->getParam('page'));
+            }else{
+                $returnArray['postList'] = Post::where('is_active', 1)
+                    ->where('zone', 'blog')
+                    ->orderByDesc('created_at')
+                    ->get();
+            }
+
+            $returnView = 'front/sections/legislative.twig';
         }
 
-        $returnView = 'front/sections/legislative.twig';
 
         return $this->render($response, $returnView, $returnArray);
     }
