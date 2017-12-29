@@ -1,0 +1,1 @@
+[26-Oct-2017 17:36:14 UTC] PHP Fatal error:  Interface 'Interop\Container\ContainerInterface' not found in /home/absgroup/public_html/vendor/slim/slim/Slim/Container.php on line 45
