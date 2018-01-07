@@ -4,11 +4,13 @@
 
     <div class="block block-secondary">
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row app-align-center">
 
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-6">
 
                     <div class="messages">
                         {% include('front/sections/flash_message.twig') %}
@@ -86,6 +88,8 @@
                                     <a href="{{ path_for('index') }}" class="btn btn-md btn-pill btn-default"><span class="icon icon-reply"> Back</span></a>
                                     <input type="submit" class="btn btn-sm btn-pill btn-primary" value="Trimite">
                                 </div>
+
+
                             </div>
 
                         </div>
@@ -94,9 +98,15 @@
 
                 </div><!-- /.8 -->
 
+                <div class="col-md-4">
+                    <div class="float-right"><iframe class="responsive-google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d712.3206575273615!2d26.1087568!3d44.4273644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff17e1643383%3A0x84dff27082fbba!2sBloc+A4%2C+Bulevardul+Unirii+37%2C+Bucure%C8%99ti+030205!5e0!3m2!1sen!2sro!4v1514972589772" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+
+                </div>
+
             </div> <!-- /.row-->
 
         </div> <!-- /.container-->
+
     </div>
 
 {% endblock %}
