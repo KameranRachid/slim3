@@ -4414,7 +4414,7 @@ button.close {
       height: 10px;
       content: ""; }
   .carousel-indicators .active {
-    background-color: #fff; }
+    background-color: #6E2C00; }
 
 .carousel-caption {
   position: absolute;
@@ -9026,6 +9026,37 @@ div.wtf > hr.style18 {
 }
 
 
+
+@media (max-width: 480px){
+    #slide1 { background: url('../../img/carousel3.jpg') top center no-repeat; width: 315px; height: 250px;}
+    #slide2 { background: url('../../img/carousel-slide2-3.jpg') top center no-repeat; width: 315px; height: 250px;}
+    #slide3 { background: url('../../img/carousel-slide3-3.jpg') top center no-repeat; width: 315px; height: 250px;}
+}
+
+@media (min-width: 481px) and (max-width: 765px){
+    #slide1 { background: url('../../img/carousel2.jpg') top center no-repeat; width: 540px; height: 250px;}
+    #slide2 { background: url('../../img/carousel-slide2-2.jpg') top center no-repeat; width: 540px; height: 250px;}
+    #slide3 { background: url('../../img/carousel-slide3-2.jpg') top center no-repeat; width: 540px; height: 250px;}
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    #slide1 { background: url('../../img/carousel5.jpg') top center no-repeat; width: 720px; height: 250px;}
+    #slide2 { background: url('../../img/carousel-slide2-5.jpg') top center no-repeat; width: 720px; height: 250px;}
+    #slide3 { background: url('../../img/carousel-slide3-5.jpg') top center no-repeat; width: 720px; height: 250px;}
+}
+
+
+@media (min-width: 1200px){
+    #slide1 { background: url('../../img/carousel1.jpg') top center no-repeat; width: 1140px; height: 500px;}
+    #slide2 { background: url('../../img/carousel-slide2-1.jpg') top center no-repeat; width: 1140px; height: 500px;}
+    #slide3 { background: url('../../img/carousel-slide3-1.jpg') top center no-repeat; width: 1140px; height: 500px;}
+}
+
+@media (min-width: 1024px) and (max-width: 1025px) {
+    #slide1 { background: url('../../img/carousel4.jpg') top center no-repeat; width: 960px; height: 250px;}
+    #slide2 { background: url('../../img/carousel-slide2-4.jpg') top center no-repeat; width: 960px; height: 250px;}
+    #slide3 { background: url('../../img/carousel-slide3-4.jpg') top center no-repeat; width: 960px; height: 250px;}
+}
 
 
 
