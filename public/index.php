@@ -7,7 +7,7 @@ session_start();
 $config = [
     'settings' => [
         'displayErrorDetails' => true,
-        /*'db' => [
+        'db' => [
             'driver' => 'mysql',
             'host' => 'absgroup.ro',
             'database' => 'absgroup_site_public',
@@ -16,8 +16,8 @@ $config = [
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-        ]*/
-
+        ]
+/*
          'db' => [
             'driver' => 'mysql',
             'host' => 'localhost',
@@ -27,7 +27,7 @@ $config = [
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-        ]
+        ]*/
     ]
 ];
 

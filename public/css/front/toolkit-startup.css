@@ -9002,27 +9002,22 @@ div.wtf > hr.style18 {
     border-radius: 20px;
 }
 
-@media (min-width: 768px) {
-  .responsive-google-map {
-    width: 600px;
-    height: 450px;
-  }
+@media (min-width: 1802px){
+  .responsive-google-map { width: 600px; height: 450px; }
+
+}
+
+@media (min-width: 768px) and (max-width: 1800px){
+  .responsive-google-map { width: 500px; height: 450px; padding-left: 100px; }
 
 }
 
 @media (max-width: 576px){
-  .responsive-google-map {
-    width: 300px;
-    height: 250px;
-  }
+  .responsive-google-map { width: 300px; height: 250px; }
 }
 
 @media (min-width: 577px) and (max-width: 680px){
-  .responsive-google-map {
-    width: 500px;
-    height: 250px;
-    margin-right: 100px;
-  }
+  .responsive-google-map { width: 500px; height: 250px; margin-right: 100px; }
 }
 
 
